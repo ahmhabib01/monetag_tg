@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monetag High Cpm Bot</title>
+  <style>
+    :root {
+      --primary-color: #2ed914;
+      --secondary-color: #1a1a1a;
+      --text-color: #ffffff;
+      --accent-color: #ff7b00;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 360px;
+      background: var(--secondary-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #00a651 0%, #00753a 100%);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .header h2 {
+      margin: 5px 0 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .developer-card {
+      background: rgba(0, 166, 81, 0.1);
+      border: 1px solid var(--primary-color);
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .developer-icon {
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .developer-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .developer-info {
+      flex: 1;
+    }
+
+    .developer-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 3px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .developer-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .points-section {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .points-value {
+      font-size: 36px;
+      font-weight: 800;
+      margin: 10px 0;
+      color: var(--primary-color);
+    }
+
+    .balance-value {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 5px 0 20px;
+      color: var(--accent-color);
+    }
+
+    .action-button {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .primary-button {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .primary-button:hover {
+      background: #1ef50b;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 166, 81, 0.4);
+    }
+
+    .secondary-button {
+      background: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .secondary-button:hover {
+      background: rgba(0, 166, 81, 0.1);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-button:hover {
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .footer-icon {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    .default-avatar {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e006eb;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+  
+  
+  
+  
+<script src='//whephiwums.com/sdk.js' data-zone='9252377' data-sdk='show_9252377'></script>  
+  
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Durov Token Official </h1>
+      <h2>Bot</h2>
+    </div>
+
+    <div class="content">
+      <div class="developer-card">
+        <div class="developer-icon" id="profile-pic">
+          <div class="default-avatar">AD</div>
+        </div>
+        <div class="developer-info">
+          <div class="developer-title">Durov Empire</div>
+          <div class="developer-name" id="username">@Durov_Empire_Bot</div>
+        </div>
+      </div>
+
+      <div class="points-section">
+        <div>Points</div>
+        <div class="points-value" id="points-value">0</div>
+        <div>Balance</div>
+        <div class="balance-value" id="balance-value">$0.00</div>
+      </div>
+
+      <button class="action-button primary-button pulse" onclick="watchAd()">
+        Watch Ad & Earn
+      </button>
+
+      <button class="action-button secondary-button" onclick="clearData()">
+        Clear Data
+      </button>
+
+      <button class="action-button secondary-button" onclick="requestWithdraw()">
+        Withdraw Balance
+      </button>
+    </div>
+
+    <div class="footer">
+      <a href="#" class="footer-button">
+        <span class="footer-icon">?</span>
+        <span>Home</span>
+      </a>
+      <a href="#" class="footer-button" onclick="shareApp(); return false;">
+        <span class="footer-icon">↗️</span>
+        <span>Share</span>
+      </a>
+      <a href="https://t.me/Mir_Panel" class="footer-button" target="_blank">
+        <span class="footer-icon">?‍?</span>
+        <span>Developer</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    let points = 0;
+    let balance = 0.00;
+    const pointsPerAd = 1;
+    const ratePerPoint = 0.05;
+
+    function loadTelegramUser() {
+      if (window.Telegram && Telegram.WebApp) {
+        const tg = Telegram.WebApp;
+        const user = tg.initDataUnsafe.user;
+        if (user) {
+          document.getElementById('username').textContent = '@' + (user.username || user.first_name || 'User');
+          const profilePic = document.getElementById('profile-pic');
+          if (user.photo_url) {
+            profilePic.innerHTML = `<img src="${user.photo_url}" alt="Profile">`;
+          }
+        }
+      }
+    }
+
+    function loadData() {
+      const savedData = localStorage.getItem('monetagData');
+      if (savedData) {
+        const data = JSON.parse(savedData);
+        points = data.points || 0;
+        balance = data.balance || 0.00;
+        updateDisplay();
+      }
+    }
+
+    function saveData() {
+      localStorage.setItem('monetagData', JSON.stringify({ points, balance }));
+    }
+
+    function updateDisplay() {
+      document.getElementById('points-value').textContent = points;
+      document.getElementById('balance-value').textContent = '$' + balance.toFixed(2);
+    }
+
+    function watchAd() {
+      if (typeof show_9252377 === 'function') {
+        show_9252377().then(() => {
+          points += pointsPerAd;
+          balance = points * ratePerPoint;
+          updateDisplay();
+          saveData();
+          alert(`+${pointsPerAd} points earned! Total: ${points} points`);
+        }).catch(error => {
+          alert('Error showing ad. Please try again.');
+        });
+      } else {
+        alert('Ad system not loaded. Please refresh the page.');
+      }
+    }
+
+    function clearData() {
+      if (confirm('Are you sure you want to clear all your points and balance?')) {
+        points = 0;
+        balance = 0.00;
+        updateDisplay();
+        saveData();
+        alert('All data has been cleared.');
+      }
+    }
+
+    function shareApp() {
+      window.location.href = "https://t.me/Durov_Empire_Bot?start=r02431776424";
+      setTimeout(function () {
+        window.location.href = window.location.href.split('?')[0];
+      }, 15000);
+      return false;
+    }
+
+    function requestWithdraw() {
+      if (balance < 5) {
+        alert("Minimum withdrawal amount is $5");
+        return;
+      }
+
+      if (!confirm(`Do you want to withdraw $${balance.toFixed(2)}?`)) return;
+
+      const botToken = '8137578243:AAERBCMlTKtCqIy0lDfkHtGkRfUki5j6OjE';
+      const adminUserId = '5155862251';
+
+      const message = `? *Withdraw Request* ?\n\n? User: ${document.getElementById("username").textContent}\n? Balance: $${balance.toFixed(2)}\n? ${new Date().toLocaleString()}`;
+
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: adminUserId,
+          text: message,
+          parse_mode: "Markdown"
+        })
+      }).then(res => res.json())
+      .then(data => {
+        if (data.ok) {
+          alert("Withdraw request sent to admin!");
+        } else {
+          alert("Failed to send request. Try again.");
+        }
+      }).catch(err => {
+        alert("An error occurred while sending the request.");
+      });
+    }
+
+    loadTelegramUser();
+    loadData();
+
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      alert("Buy This Code From Developer");
+      window.location.href = "hhttps://t.me/Durov_Empire_Bot?start=r02431776424";
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (
+        e.key === "F12" || 
+        (e.ctrlKey && ["I", "J", "C", "U", "K", "S", "A", "X", "P"].includes(e.key)) || 
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) || 
+        (e.ctrlKey && e.key === "S") || 
+        e.shiftKey
+      ) {
+        e.preventDefault();
+        alert("Buy This Code From Developer");
+        window.location.href = "https://t.me/Durov_Empire_Bot?start=r02431776424";
+      }
+    });
+  </script>
+</body>
+</html>
